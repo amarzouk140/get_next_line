@@ -88,10 +88,8 @@ char	*skip_and_free(char *full_string)
 		new_string[j++] = full_string[i++];
 	new_string[j] = '\0';
 	free(full_string);
-	if(new_string[j] == 0)
-	{
-	return(free(new_string), NULL);
-	}
+	if (new_string[0] == '\0')
+		return (free(new_string), NULL);
 	return (new_string);
 }
 
